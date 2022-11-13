@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+
 Widget InputBar(
     {textColor,
       mainColor,
@@ -11,10 +10,12 @@ Widget InputBar(
       isValied}) {
   int mxl = 1;
   return TextFormField(
+
     maxLines: mxl,
     controller: controller,
     keyboardType: TextInputType.multiline,
     decoration: InputDecoration(
+      icon: Icon(Icons.add),
       errorText: isValied ? 'Bu kutucuk boş bırakılamaz' : null,
       errorStyle: TextStyle(fontSize: 0.1),
       enabledBorder: OutlineInputBorder(

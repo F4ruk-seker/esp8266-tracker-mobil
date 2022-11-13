@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "664359787110",
+    "project_id": "esptrackerf4",
+    "storage_bucket": "esptrackerf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664359787110:android:2f747801a35b3bf459eba7",
+        "android_client_info": {
+          "package_name": "com.f4ruk.esptracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664359787110-pgn9u5l9s7ufvtgmloqocbkjjen8iq8u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.f4ruk.esptracker",
+            "certificate_hash": "ea28206c3b7500931a25dab8e82293e3a2f4e8c2"
+          }
+        },
+        {
+          "client_id": "664359787110-7ilg6rcovnp9bmssokee1094iuponph3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9OUkZBYp4VEdSQ9PoTVBRkdi02HGuxq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664359787110-7ilg6rcovnp9bmssokee1094iuponph3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
