@@ -8,7 +8,7 @@ import 'services/auth/login.dart';
 
 import 'pages/data_view_pages/view_all_esp.dart';
 
-
+import 'pages/data_view_pages/esp_detail.dart';
 
 bool isLogin = false;
 
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       // scaffoldMessengerKey: Grock.scaffoldMessengerKey,
       theme: ThemeData.dark(
       ),
-      home: const ViewAllEsp(),
+      home: const esp_detail_view(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
