@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'pages/authpages/loginpage.dart';
 
+import 'services/notfication_service.dart';
 import 'services/auth/login.dart';
 
-import 'pages/data_view_pages/esp8266widget.dart';
+import 'pages/data_view_pages/view_all_esp.dart';
+
+
+
 bool isLogin = false;
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  isLogin = await device_has_auth();
-  // pars_authentication(email: 'djjeremys0@gmail.com',password: '1afsbns1A');
+  await NotificationService().initNotification();
+  // isLogin = await device_has_auth();
+  // await pars_authentication_log_out();
+  var user = await pars_authentication(email: 'djjeremys0@gmail.com',password: '1afsbns1A');
+  // user.uid
   runApp(const MyApp());
 }
 
@@ -25,9 +34,12 @@ class MyApp extends StatelessWidget {
     }
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      // navigatorKey: Grock.navigationKey,
+      // scaffoldMessengerKey: Grock.scaffoldMessengerKey,
       theme: ThemeData.dark(
       ),
-      home: espDataCard('3450'),
+      home: const ViewAllEsp(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
