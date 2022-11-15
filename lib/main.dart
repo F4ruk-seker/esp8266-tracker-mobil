@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       // scaffoldMessengerKey: Grock.scaffoldMessengerKey,
       theme: ThemeData.dark(
       ),
-      home: const esp_detail_view(),
+      home: esp_detail_view(espID: "3450"),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
