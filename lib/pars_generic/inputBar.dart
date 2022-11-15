@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 Widget InputBar(
     {textColor,
@@ -52,13 +53,18 @@ Widget InputBarPars(
       hintText,
       controller,
       isPassword,
+      isNumber,
       isValied}) {
   int mxl = 1;
   return TextFormField(
 
+    inputFormatters:  <TextInputFormatter>[
+
+      isNumber ? FilteringTextInputFormatter.digitsOnly : FilteringTextInputFormatter.singleLineFormatter
+    ],
     maxLines: mxl,
     controller: controller,
-    keyboardType: TextInputType.multiline,
+    keyboardType: isNumber ? TextInputType.number : TextInputType.multiline,
     decoration: InputDecoration(
       // icon: Icon(Icons.add),
       errorText: isValied ? 'Bu kutucuk boş bırakılamaz' : null,
@@ -87,3 +93,5 @@ Widget InputBarPars(
     // obscuringCharacter: "*",
   );
 }
+
+// keyboardType

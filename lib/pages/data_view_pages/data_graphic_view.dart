@@ -6,7 +6,6 @@ import 'package:chart_sparkline/chart_sparkline.dart';
 
 Widget EspDataGraphicView(List<dynamic>? data){
   List<double> cleanList = [];
-
   if (data != null){
     data.forEach((value) {
     if (value.runtimeType == String){
@@ -42,6 +41,6 @@ Widget EspDataGraphicView(List<dynamic>? data){
       data: cleanList,
     );
   }else{
-    return Text("grafik datası alındamadı");
+    return Text("grafik datası alınamadı");
   }
 }

@@ -36,8 +36,8 @@ class _esp_detail_viewState extends State<esp_detail_view> {
           builder: (BuildContext context, AsyncSnapshot asyncSnapshot) {
             if (asyncSnapshot.hasData) {
               var data = asyncSnapshot.data;
-              String esp_name = data.get("name");
-              String esp_sensor = data.get("sensor");
+              String? esp_name = data.get("name");
+              String? esp_sensor = data.get("sensor");
               List? sensor_history;
               try {
                 sensor_history = data.get("sensor_history");
@@ -66,26 +66,25 @@ class _esp_detail_viewState extends State<esp_detail_view> {
                         Padding(
                           padding: EdgeInsets.only(top: 5, bottom: 5),
                           child: InputBarPars(
-                              controller: TextEditingController(),
+                              isNumber: false,
+
+                              controller: TextEditingController(text: esp_name ),
+                              isPassword: false,
+                              hintText: "Sensor Name",
+                              isValied: false),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 5, bottom: 5),
+                          child: InputBarPars(
+                            isNumber: true,
+                              controller: TextEditingController(text: "pars__"),
                               isPassword: false,
                               hintText: "pars",
                               isValied: false),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 5, bottom: 5),
-                          child: InputBarPars(
-                              controller: TextEditingController(),
-                              isPassword: false,
-                              hintText: "pars",
-                              isValied: false),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 5, bottom: 5),
-                          child: InputBarPars(
-                              controller: TextEditingController(),
-                              isPassword: false,
-                              hintText: "pars",
-                              isValied: false),
+                          child: Text("a"),
                         ),
                         const Padding(
                             padding: EdgeInsets.only(top: 5, bottom: 5),
